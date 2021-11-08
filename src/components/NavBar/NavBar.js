@@ -23,6 +23,7 @@ const NavBar = ({ setMovies, movies, setFilterSearch, setRate }) => {
               <ReactStars
                 count={5}
                 onChange={(e)=> setRate(e)}
+                
                 size={24}
                 activeColor="#ffd700"
               />,

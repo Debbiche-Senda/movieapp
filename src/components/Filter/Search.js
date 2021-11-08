@@ -4,7 +4,7 @@ import "./Search.css";
 
 const Search = ({setFilterSearch}) => {
   return (
-    <div class="box">
+    <div className="box">
       <form name="search">
         <input
           type="text"
@@ -15,7 +15,7 @@ const Search = ({setFilterSearch}) => {
           placeholder = "Search"
         />
       </form>
-      <i class="fas fa-search"></i>
+      
     </div>
   );
 };

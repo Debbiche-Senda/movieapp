@@ -29,7 +29,7 @@ const AddMovie = ({ setMovies, movies }) => {
       posterUrl: photo,
       title: title,
       description: description,
-      rate: addRate,
+      rating: addRate,
     };
 
     if (photo === "" || title === "" || addRate === ""){

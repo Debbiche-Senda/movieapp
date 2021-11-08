@@ -71,6 +71,12 @@ export const data = [
     title: "James Bond 007: Mourir peut attendre",
     description: "James Bond n'est plus en service et profite d'une vie tranquille en Jamaïque. Mais son répit est de courte durée car l'agent de la CIA Felix Leiter fait son retour pour lui demander son aide. Sa mission, qui est de secourir un scientifique kidnappé, va se révéler plus traître que prévu, et mener 007 sur la piste d'un méchant possédant une nouvelle technologie particulièrement dangereuse." ,
     rating : 4,
-  },
+  },{
+    id: uuidv4(),
+    posterUrl: "https://www.cine-vox.com/evenement/mourir_peut_attendre.jpg",
+    title: "James Bond 007: Mourir peut attendre",
+    description: "James Bond n'est plus en service et profite d'une vie tranquille en Jamaïque. Mais son répit est de courte durée car l'agent de la CIA Felix Leiter fait son retour pour lui demander son aide. Sa mission, qui est de secourir un scientifique kidnappé, va se révéler plus traître que prévu, et mener 007 sur la piste d'un méchant possédant une nouvelle technologie particulièrement dangereuse." ,
+    rating : 4,
+  }
   
 ];
