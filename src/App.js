@@ -3,7 +3,8 @@ import "./App.css";
 import { data } from "./data";
 import MovieList from "./components/MovieList/MovieList";
 import NavBar from "./components/NavBar/NavBar";
-import  {Switch , Route} from "react-router-dom";
+import { Route } from "react-router-dom";
+import MovieDetails from "./components/MovieDetails/MovieDetails";
 // import AddMovie from "./components/AddMovie/AddMovie";
 // import Search from "./components/Filter/Search";
 
@@ -18,20 +19,26 @@ function App() {
 
   return (
     <div className="App">
-      <Switch>
-      <Route
-        path="/"
-        render={() => 
-          <NavBar
-            setMovies={getNewMovie}
-            movies={movies}
-            setFilterSearch={setFilterSearch}
-            setRate={setRate}
-          />
-        }
+      <NavBar
+        setMovies={getNewMovie}
+        movies={movies}
+        setFilterSearch={setFilterSearch}
+        setRate={setRate}
       />
-      <MovieList movies={movies} filterSearch={filterSearch} rate={rate} />
-      </Switch>
+
+      <Route
+        exact
+        path="/"
+        render={() => (
+          <MovieList movies={movies} filterSearch={filterSearch} rate={rate} />
+        )}
+      />
+      <Route
+        exact
+        path="/moviedetails/:id"
+        render={(defaultProps) => <MovieDetails movies={movies} {...defaultProps} />}
+        
+      />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { Navbar, Nav, Container} from "react-bootstrap";
 import AddMovie from "../AddMovie/AddMovie";
 import Search from "../Filter/Search";
 import ReactStars from "react-rating-stars-component";
+import {Link} from "react-router-dom";
 
 const NavBar = ({ setMovies, movies, setFilterSearch, setRate }) => {
   // const ratingChanged = (newRating) => {
@@ -10,6 +11,7 @@ const NavBar = ({ setMovies, movies, setFilterSearch, setRate }) => {
   // };
   return (
     <div>
+      <Link to="/">
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="#home">MovieApp</Navbar.Brand>
@@ -32,6 +34,7 @@ const NavBar = ({ setMovies, movies, setFilterSearch, setRate }) => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      </Link>
     </div>
   );
 };

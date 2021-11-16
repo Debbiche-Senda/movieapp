@@ -73,10 +73,10 @@ export const data = [
     rating : 4,
   },{
     id: uuidv4(),
-    posterUrl: "https://www.cine-vox.com/evenement/mourir_peut_attendre.jpg",
-    title: "James Bond 007: Mourir peut attendre",
-    description: "James Bond n'est plus en service et profite d'une vie tranquille en Jamaïque. Mais son répit est de courte durée car l'agent de la CIA Felix Leiter fait son retour pour lui demander son aide. Sa mission, qui est de secourir un scientifique kidnappé, va se révéler plus traître que prévu, et mener 007 sur la piste d'un méchant possédant une nouvelle technologie particulièrement dangereuse." ,
-    rating : 4,
+    posterUrl: "https://img-4.linternaute.com/2ZtungH06Dy5Bn2LX4BJaIty2NA=/405x540/1ace68814e954b63a39e4d74af428206/ccmcms-linternaute/192103.jpeg",
+    title: "Eiffel",
+    description: "Le gouvernement français veut qu'il crée quelque chose de spectaculaire pour l'Exposition Universelle de 1889 à Paris, mais Eiffel ne s'intéresse qu'au projet de métropolitain. Tout bascule lorsqu'il recroise son amour de jeunesse. Leur relation interdite l'inspire à changer l'horizon de Paris pour toujours." ,
+    rating : 1,
   }
   
 ];

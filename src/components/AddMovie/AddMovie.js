@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 import "./AddMovie.css";
-import {Modal , Button } from "react-bootstrap";
+import { Modal, Button } from "react-bootstrap";
 import ReactStars from "react-rating-stars-component";
-
-
 
 const customStyles = {
   content: {
@@ -32,12 +30,12 @@ const AddMovie = ({ setMovies, movies }) => {
       rating: addRate,
     };
 
-    if (photo === "" || title === "" || addRate === ""){
+    if (photo === "" || title === "" || addRate === "") {
       return alert("Fill all the blanks!");
     }
 
     setMovies([...movies, newMovie]);
-    closeModal()
+    closeModal();
   };
   function openModal() {
     setIsOpen(!modalIsOpen);
@@ -45,7 +43,6 @@ const AddMovie = ({ setMovies, movies }) => {
   function closeModal() {
     setIsOpen(false);
   }
-
 
   return (
     // <div className="addmovie">
@@ -67,49 +64,54 @@ const AddMovie = ({ setMovies, movies }) => {
     //   <button onClick={() => addMovie()}> Add</button>
     // </div>
     <div>
-      <button onClick={openModal} className="stylingButton">Add Movie</button>
+      <button onClick={openModal} className="stylingButton">
+        Add Movie
+      </button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={customStyles}
-        contentLabel="Example Modal">
-    </Modal>
+        contentLabel="Example Modal"
+      ></Modal>
 
-    {modalIsOpen && <Modal.Dialog>
-  <Modal.Header closeButton>
-  <input
-        type="text"
-        placeholder="title"
-        onChange={(e) => setTitle(e.target.value)}
-      />
-  </Modal.Header>
-  
+      {modalIsOpen && (
+        <Modal.Dialog>
+          <Modal.Header closeButton>
+            <input
+              type="text"
+              placeholder="title"
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          </Modal.Header>
 
-  <Modal.Body >
-  <input
-        type="text"
-        placeholder="photo"
-        onChange={(e) => setPhoto(e.target.value)}
-      />
-  <input
-        type="text"
-        placeholder="description"
-        onChange={(e) => setDescription(e.target.value)}
-      />
-   <ReactStars
-    count={5}
-    onChange={(e)=> setAddRate(e)}
-    size={24}
-    activeColor="#ffd700"
-  />,
-  </Modal.Body>
+          <Modal.Body>
+            <input
+              type="text"
+              placeholder="photo"
+              onChange={(e) => setPhoto(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="description"
+              onChange={(e) => setDescription(e.target.value)}
+            />
+            <ReactStars
+              count={5}
+              onChange={(e) => setAddRate(e)}
+              size={24}
+              activeColor="#ffd700"
+            />
+            ,
+          </Modal.Body>
 
-  <Modal.Footer>
- 
-    <Button variant="primary"  onClick={() => addMovie()}>Add</Button>
-  </Modal.Footer>
-</Modal.Dialog>}
-</div>
+          <Modal.Footer>
+            <Button variant="primary" onClick={() => addMovie()}>
+              Add
+            </Button>
+          </Modal.Footer>
+        </Modal.Dialog>
+      )}
+    </div>
   );
 };
 
